@@ -1,0 +1,93 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  color: white;
+  background: #384249;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+input[type="text"] {
+  color: white;
+}
+
+button {
+  display: none;
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.row {
+  width: 450px;
+  margin-top: 25%;
+}
+
+.prefix {
+  margin-top: 8px;
+}
+
+.input-field .prefix.active {
+  color: #23b3c3;
+}
+.input-field label {
+  color: white;
+}
+
+.input-field input[type="text"] {
+  font-size: 1.5em;
+  border-bottom: 2px solid white;
+}
+
+.input-field input[type="text"]:focus + label,
+.input-field input[type="text"]:focus.valid + label {
+  color: #23bece;
+}
+
+.input-field input[type="text"].valid,
+.input-field input[type="text"]:focus.valid {
+  border-bottom: 1px solid #23bece;
+  box-shadow: 0 1px 0 0 #23bece;
+}
+
+.alert {
+  width: 350px;
+  color: white;
+  border-radius: 0.65em;
+  margin-left: 4.09em;
+  padding: 1em 2em;
+  display: none;
+}
+
+.success {
+  background-color: #419731;
+}
+
+.error {
+  background-color: #bb0a1e;
+}
+
+.icon-alert {
+  margin-right: 1.25em;
+}
+
+.alert-message {
+  font-weight: bold;
+}
+
+.alert-message-sub {
+  font-size: 0.85em;
+  font-weight: normal;
+}
+
+.feather {
+  margin-top: 3px;
+}
