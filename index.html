@@ -4,16 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Cpf Validation</title>
-    <!--Import Google Icon Font-->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    
-    <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-
-    <!-- Import Feather Icons -->
+		 <!-- Import Feather Icons -->
     <script src="https://unpkg.com/feather-icons"></script>
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
 
@@ -21,40 +13,44 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <div class="container">
-      <div class="row">
-        <form class="col s12" action="#">
-          <div class="input-field col s12">
-            <i class="material-icons prefix">account_circle</i>
-            <input id="cpf" type="text" maxlength="14">
-            <label for="cpf">CPF</label>
-          </div>
-          <button id="action" type="submit">submit</button>
-        </form>
 
-        <div class="col s12 clean-div">
-          <div id="error" class="alert error" >
-            <span class="icon-alert" data-feather="alert-circle"></span>
-            <div class="alert-message">
-              <p class="alert-message-title">Este CPF é inválido!</p>
-              <p class="alert-message-sub">Por favor, tente novamente.</p>
-            </div>
-          </div>
+		<div class="container">
+			<div class="row">
 
-          <div id="success" class="alert success" >
-            <span class="icon-alert" data-feather="check-circle"></span>
-            <div class="alert-message">
-              <p class="alert-message-title">CPF validado com sucesso!</p>
-              <p class="alert-message-sub">Parabéns, este é um CPF válido.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+				<div class="form-box">
+					<label for="cpf">CPF</label>
+					<div>
+						<input type="text" id="cpf" placeholder="Digite apenas números" maxlength="14"/>
+						<button type="submit" id="action" onclick="click()">validar</button>
+					</div>
+				</div>
 
-    <script>
+				<div class="alerts">
+
+					<div id="error" class="alert error" >
+						<span class="icon-alert" data-feather="alert-circle"></span>
+						<div class="alert-message">
+							<p class="alert-message-title">Este CPF é inválido!</p>
+							<p class="alert-message-sub">Por favor, tente novamente.</p>
+						</div>
+					</div>
+
+					<div id="success" class="alert success" >
+						<span class="icon-alert" data-feather="check-circle"></span>
+						<div class="alert-message">
+							<p class="alert-message-title">Este é um CPF válido!</p>
+							<p class="alert-message-sub">Parabéns, este é um CPF válido.</p>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+
+		<script>
       feather.replace()
     </script>
-    <script src="main.js" charset="utf-8"></script>
+    <script src="main.js"></script>
   </body>
 </html>

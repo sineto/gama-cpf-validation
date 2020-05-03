@@ -1,9 +1,10 @@
 * {
   box-sizing: border-box;
 }
+
 body {
-  color: white;
-  background: #384249;
+  font-family: sans-serif;
+  background: #f9f8fb;
 }
 
 p {
@@ -11,58 +12,82 @@ p {
   padding: 0;
 }
 
-input[type="text"] {
-  color: white;
+label {
+  font-size: 1.2em;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+::placeholder {
+  font-weight: bold;
+  color: rgba(185, 185, 185, 0.8);
+}
+
+input {
+  color: rgba(0, 0, 0, 0.7);
+  border: none;
+  border-radius: 0.65em;
+  box-shadow: 3px 2px 10px #e6e6e6;
+  padding: 1em;
+  outline: none;
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+input:focus {
+  box-shadow: 6px 12px 15px #e6e6e6;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-text-fill-color: rgba(0, 0, 0, 0.7);
+  transition: background-color 5000s ease-in-out 0s;
 }
 
 button {
-  display: none;
+  text-transform: capitalize;
+  color: white;
+  background: #0ac083;
+  border-radius: 0.65em;
+  border: none;
+  padding: 1em;
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.2s ease-in-out;
+}
+
+button:hover {
+  background-color: #00d68e;
 }
 
 .container {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+  width: 450px;
+  height: 450px;
+  margin: 0 auto;
 }
 
 .row {
-  width: 450px;
-  margin-top: 25%;
+  margin-top: 40vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.prefix {
-  margin-top: 8px;
+.form-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.input-field .prefix.active {
-  color: #23b3c3;
-}
-.input-field label {
-  color: white;
-}
-
-.input-field input[type="text"] {
-  font-size: 1.5em;
-  border-bottom: 2px solid white;
-}
-
-.input-field input[type="text"]:focus + label,
-.input-field input[type="text"]:focus.valid + label {
-  color: #23bece;
-}
-
-.input-field input[type="text"].valid,
-.input-field input[type="text"]:focus.valid {
-  border-bottom: 1px solid #23bece;
-  box-shadow: 0 1px 0 0 #23bece;
+.alerts {
+  width: 410px;
+  margin-top: 1em;
 }
 
 .alert {
-  width: 350px;
   color: white;
   border-radius: 0.65em;
-  margin-left: 4.09em;
   padding: 1em 2em;
   display: none;
 }
@@ -89,5 +114,6 @@ button {
 }
 
 .feather {
-  margin-top: 3px;
+  width: 45px;
+  height: 45px;
 }
